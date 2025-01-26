@@ -1,0 +1,97 @@
+/* Variáveis globais */
+:root {
+    --cor-principal: #3498db;
+    --cor-secundaria: #2ecc71;
+    --cor-fundo: #f5f5f5;
+    --cor-texto: #333333;
+    --fonte-principal: 'Arial', sans-serif;
+    --tamanho-titulo: 24px;
+    --tamanho-texto: 16px;
+}
+
+/* Estilos globais */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-principal);
+    font-size: var(--tamanho-texto);
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background-color: var(--cor-principal);
+    color: #fff;
+    border-bottom: 2px solid var(--cor-secundaria);
+}
+
+header img {
+    margin-right: 16px;
+}
+
+header h1 {
+    font-size: var(--tamanho-titulo);
+    margin: 0;
+}
+
+/* Navegação */
+nav {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--cor-principal);
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    text-align: left;
+    padding: 12px 24px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main */
+main {
+    margin-left: 260px;
+    padding: 16px;
+}
+
+h2 {
+    font-size: var(--tamanho-titulo);
+    color: var(--cor-principal);
+    border-bottom: 2px solid var(--cor-secundaria);
+    padding-bottom: 8px;
+}
+
+/* Footer */
+footer {
+    margin-left: 260px;
+    text-align: center;
+    padding: 16px;
+    background-color: var(--cor-principal);
+    color: #fff;
+}

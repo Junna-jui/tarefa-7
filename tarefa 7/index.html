@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Notícias sobre Desenvolvimento Web</title>
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Adicione o Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" id="menu-abrir" aria-label="Abrir menu">
+            <i class="fas fa-bars"></i> <!-- Ícone de menu -->
+        </label>
+        <label for="menu-toggle" id="menu-fechar" aria-label="Fechar menu">
+            <i class="fas fa-times"></i> <!-- Ícone de fechar -->
+        </label>
+        <h1>
+            <img src="noticia.png" alt="Logo do Site" width="50" height="50">
+            Notícias
+        </h1>
+        <nav class="menu-navegacao">
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="listagem.html">Listagem</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="index_estilo2.html">Visualizar Layout 2</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Front-end</h2>
+            <article>
+                <h3>CSS ganha nova atualização com recursos para design responsivo avançado</h3>
+                <img src="css.jpg" alt="Imagem Css" width="400" height="300">
+                <p>A mais recente atualização do CSS trouxe novidades que prometem facilitar a criação de layouts
+                    responsivos. Entre os destaques estão as propriedades container queries, que permitem estilos
+                    baseados no tamanho de contêineres, e o subgrid, que aprimora o controle de grades dentro de layouts
+                    complexos. Essas ferramentas oferecem maior flexibilidade e precisão no design, reduzindo a
+                    dependência de soluções complexas em JavaScript. Especialistas acreditam que a atualização marcará
+                    um novo marco na evolução do front-end web.</p>
+            </article>
+            <article>
+                <h3>Bootstrap lança nova versão com foco em performance e acessibilidade</h3>
+                <img src="bootstrap.png" alt="Imagem bootstrap" width="400" height="300">
+                <p>A nova versão do Bootstrap, popular framework front-end, chegou com melhorias significativas. Entre
+                    as novidades estão componentes otimizados para acessibilidade, suporte nativo a CSS Grid e um
+                    sistema de temas mais flexível, facilitando personalizações. Além disso, a atualização reduz o
+                    tamanho do pacote e melhora o desempenho em dispositivos móveis. A comunidade de desenvolvedores
+                    celebra as mudanças, que prometem agilizar o desenvolvimento de interfaces modernas e inclusivas.
+                </p>
+            </article>
+        </section>
+        <section>
+            <h2>Back-end</h2>
+            <article>
+                <h3>PHP na web</h3>
+                <img src="php.jpg" alt="Imagem php" width="400" height="300">
+                <p>O PHP na web é uma linguagem de programação usada principalmente no lado do servidor para gerar
+                    páginas dinâmicas e interativas. Ele processa as solicitações do navegador do usuário, executa o
+                    código necessário no servidor e envia o resultado em formato HTML para o navegador.</p>
+            </article>
+            <article>
+                <h3>JavaScript na web</h3>
+                <img src="javascript.jpg" alt="Imagem  javascript" width="400" height="300">
+                <p>O JavaScript na web é a tecnologia responsável por tornar páginas estáticas (criadas apenas com HTML
+                    e CSS) interativas, dinâmicas e responsivas. Ele é executado diretamente no navegador do usuário,
+                    permitindo criar experiências ricas e personalizadas sem a necessidade de recarregar a página
+                    constantemente.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Créditos: Julianna Ramos</p>
+    </footer>
+</body>
+</html>

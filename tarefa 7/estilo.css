@@ -1,0 +1,208 @@
+/* Variáveis globais */
+:root {
+    --cor-principal: #3498db;
+    --cor-secundaria: #2ecc71;
+    --cor-fundo: #f5f5f5;
+    --cor-texto: #333333;
+    --fonte-principal: 'Arial', sans-serif;
+    --tamanho-titulo: 24px;
+    --tamanho-texto: 16px;
+}
+
+/* Estilos globais */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-principal);
+    font-size: var(--tamanho-texto);
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: var(--cor-principal);
+    color: #fff;
+    border-bottom: 2px solid var(--cor-secundaria);
+    position: relative;
+}
+
+header img {
+    margin-right: 16px;
+}
+
+header h1 {
+    font-size: var(--tamanho-titulo);
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Navegação */
+nav {
+    display: none; /* Esconde o menu por padrão */
+    background-color: var(--cor-principal);
+    position: absolute;
+    top: 100%; /* Posiciona o menu abaixo do header */
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid var(--cor-secundaria);
+}
+
+nav ul li:last-child {
+    border-bottom: none;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Botões de abrir e fechar menu */
+#menu-abrir, #menu-fechar {
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none; /* Esconde os botões por padrão */
+}
+
+#menu-fechar {
+    display: none; /* Esconde o botão de fechar inicialmente */
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* Mostrar menu ao clicar no botão de abrir */
+#menu-toggle:checked ~ nav {
+    display: block; /* Mostra o menu quando o checkbox está marcado */
+}
+
+#menu-toggle:checked ~ #menu-abrir {
+    display: none; /* Esconde o botão de abrir quando o menu está aberto */
+}
+
+#menu-toggle:checked ~ #menu-fechar {
+    display: inline-block; /* Mostra o botão de fechar quando o menu está aberto */
+}
+
+/* Mostrar botão de abrir em telas pequenas */
+@media (max-width: 768px) {
+    #menu-abrir {
+        display: inline-block; /* Mostra o botão de abrir em telas pequenas */
+    }
+
+    nav {
+        display: none; /* Garante que o menu esteja escondido por padrão em telas pequenas */
+    }
+}
+
+/* Mostrar menu ao passar o mouse em telas grandes */
+@media (min-width: 769px) {
+    #menu-abrir, #menu-fechar {
+        display: none; /* Esconde os botões em telas grandes */
+    }
+
+    nav {
+        display: flex; /* Mostra o menu em telas grandes */
+        position: static;
+        width: auto;
+        background: none;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 16px;
+    }
+
+    /* Mostrar menu ao passar o mouse */
+    header:hover nav {
+        display: flex;
+    }
+}
+
+
+.formulario-cadastro {
+    width: 100%; /* Largura máxima do conteúdo */
+}
+
+/* Responsividade do conteúdo principal */
+main {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+section {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: var(--tamanho-titulo);
+    color: var(--cor-principal);
+    border-bottom: 2px solid var(--cor-secundaria);
+    padding-bottom: 8px;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 16px;
+    background-color: var(--cor-principal);
+    color: #fff;
+}
+
+/* Layout de Impressão */
+@media print {
+    nav, #menu-abrir, #menu-fechar {
+        display: none !important; /* Esconde o menu e os botões na impressão */
+    }
+
+    header {
+        border-bottom: none;
+    }
+
+    main {
+        display: block; /* Remove o grid na impressão */
+    }
+
+    section {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}

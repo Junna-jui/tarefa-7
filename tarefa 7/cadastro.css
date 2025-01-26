@@ -1,0 +1,224 @@
+/* Variáveis globais */
+:root {
+    --cor-principal: #3498db;
+    --cor-secundaria: #2ecc71;
+    --cor-fundo: #f5f5f5;
+    --cor-texto: #333333;
+    --fonte-principal: 'Arial', sans-serif;
+    --tamanho-titulo: 24px;
+    --tamanho-texto: 16px;
+}
+
+/* Estilos globais */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-principal);
+    font-size: var(--tamanho-texto);
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: var(--cor-principal);
+    color: #fff;
+    border-bottom: 2px solid var(--cor-secundaria);
+    position: relative;
+}
+
+header img {
+    margin-right: 16px;
+}
+
+header h1 {
+    font-size: var(--tamanho-titulo);
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Navegação */
+nav {
+    display: none;
+    background-color: var(--cor-principal);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid var(--cor-secundaria);
+}
+
+nav ul li:last-child {
+    border-bottom: none;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Botões de abrir e fechar menu */
+#menu-abrir, #menu-fechar {
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none; /* Esconde os botões por padrão */
+}
+
+#menu-fechar {
+    display: none; /* Esconde o botão de fechar inicialmente */
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked ~ nav {
+    display: block;
+}
+
+#menu-toggle:checked ~ #menu-abrir {
+    display: none;
+}
+
+#menu-toggle:checked ~ #menu-fechar {
+    display: inline-block;
+}
+
+/* Main */
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+h2 {
+    font-size: var(--tamanho-titulo);
+    color: var(--cor-principal);
+    border-bottom: 2px solid var(--cor-secundaria);
+    padding-bottom: 8px;
+    text-align: center; /* Centraliza o título */
+}
+
+/* Estilos específicos para o formulário de cadastro */
+.formulario-cadastro {
+    max-width: 600px;
+    width: 100%; /* Garante que o formulário ocupe 100% da largura disponível */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--cor-texto);
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea,
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: var(--tamanho-texto);
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+
+.form-group textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+.form-group input[type="file"] {
+    padding: 5px;
+}
+
+.botao-cadastrar {
+    background-color: var(--cor-principal);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: var(--tamanho-texto);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao-cadastrar:hover {
+    background-color: var(--cor-secundaria);
+}
+
+/* Responsividade do formulário */
+@media (max-width: 768px) {
+    .formulario-cadastro {
+        padding: 15px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="date"],
+    .form-group select,
+    .form-group textarea,
+    .form-group input[type="file"] {
+        font-size: 14px;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 16px;
+    background-color: var(--cor-principal);
+    color: #fff;
+}
+
+/* Layout de Impressão */
+@media print {
+    nav, #menu-abrir, #menu-fechar {
+        display: none !important; /* Esconde o menu e os botões na impressão */
+    }
+
+    header {
+        border-bottom: none;
+    }
+
+    main {
+        display: block; /* Remove o flexbox na impressão */
+    }
+
+    section {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
